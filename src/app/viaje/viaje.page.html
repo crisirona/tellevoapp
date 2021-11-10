@@ -1,0 +1,45 @@
+<ion-toolbar color="tertiary">
+  <ion-buttons slot="secondary">
+    <ion-button color="light" fill="outline" (click)="redirectHome()" >
+      <ion-icon slot="start" name="home"></ion-icon>
+      Home
+    </ion-button>
+  </ion-buttons>
+  <ion-title>Te Llevo App</ion-title>
+  <ion-buttons slot="primary">
+    <ion-button color="light" fill="outline">
+      Perfil
+      <ion-icon slot="end" name="create"></ion-icon>
+    </ion-button>
+  </ion-buttons>
+</ion-toolbar>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <form>
+        <img src="../../assets/img/logo_1.png" alt="logo_1">
+        <ion-item>
+          <ion-grid>
+            <ion-label>Horario de Salida: </ion-label>
+            <div class="hora-container">
+              <ion-input placeholder="Hora" id="hora" #hora type="text"></ion-input>
+              /
+              <ion-input placeholder="Min" id="min" #min type="text"></ion-input>
+              /
+              <ion-input placeholder="AM / PM" id="ampm" #ampm type="text"></ion-input>
+            </div>
+
+          </ion-grid>
+        </ion-item>
+        <ion-grid>
+          <ion-button >Crear Nuevo Viaje</ion-button>
+        </ion-grid>
+        <ion-grid>
+          <ion-button (click)="redirectHome()">Volver</ion-button>
+        </ion-grid>
+      </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>>

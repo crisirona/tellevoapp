@@ -1,0 +1,28 @@
+{
+  "data" : [
+      {
+          "username":"han",
+          "password": "pwd1",
+          "mail":"han@mail.com",
+          "rol":"admin"
+      },
+      {
+          "username":"luke",
+          "password": "pwd2",
+          "mail":"luke@mail.com",
+          "rol":"user"
+      },
+      {
+        "username":"leia",
+        "password": "pwd3",
+        "mail":"leia@mail.com",
+        "rol":"user"
+    },
+    {
+        "username":"arthur",
+        "password": "pwd4",
+        "mail":"arthur@mail.com",
+        "rol":"user"
+    }
+  ]
+}

@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { AuthGuard } from './auth.guard';
+import { NoAuthGuard } from './no-auth.guard';
 
 const routes: Routes = [
   {
@@ -8,8 +10,36 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'inicio',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule),
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'resetpass',
+    loadChildren: () => import('./resetpass/resetpass.module').then( m => m.ResetpassPageModule)
+  },
+  {
+    path: 'clear',
+    loadChildren: () => import('./clear/clear.module').then( m => m.ClearPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule),
+    canActivate:[AuthGuard]
+  },
+  {
+    path: 'viaje',
+    loadChildren: () => import('./viaje/viaje.module').then( m => m.ViajePageModule),
+    canActivate:[NoAuthGuard]
+  },
+  {
+    path: 'register',
+    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule),
+    canActivate:[AuthGuard]
   },
 ];
 
