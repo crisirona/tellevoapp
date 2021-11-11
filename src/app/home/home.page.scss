@@ -25,3 +25,22 @@
 #container a {
   text-decoration: none;
 }
+
+#bienvenido{
+  text-transform: capitalize;
+}
+
+#nuevo-viaje{
+  display: flex;
+  width: 60%;
+  height: 60px;
+  background: rgb(97, 190, 233);
+  margin: 350px auto;
+
+  #btn-viaje{
+    text-align: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+  }
+}

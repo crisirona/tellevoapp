@@ -1,0 +1,43 @@
+<ion-toolbar color="tertiary">
+  <div id="tool-container" >
+    <ion-button id="btn-back" color="tertiary" (click)="redirectToInicio()">
+      <ion-icon name="arrow-back" slot="start"></ion-icon>
+    </ion-button>
+    <ion-title>Te Llevo App</ion-title>
+  </div>
+
+
+</ion-toolbar>
+
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+
+      <form>
+        <img src="../../assets/img/logo_1.png" alt="logo_1">
+        <ion-item>
+          <ion-grid>
+            <ion-label>Username: </ion-label>
+            <ion-input id="username" #username type="text"></ion-input>
+          </ion-grid>
+        </ion-item>
+        <ion-item>
+          <ion-grid>
+            <ion-label>Contraseña: </ion-label>
+            <ion-input id="password" #password type="password"></ion-input>
+          </ion-grid>
+        </ion-item>
+        <ion-item>
+          <ion-grid>
+            <ion-label>Confirmar Contraseña: </ion-label>
+            <ion-input id="password" #password type="password"></ion-input>
+          </ion-grid>
+        </ion-item>
+        <ion-grid>
+          <ion-button >Registrarme</ion-button>
+        </ion-grid>
+      </form>
+    </ion-row>
+  </ion-grid>
+</ion-content>>
