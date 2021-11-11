@@ -24,28 +24,21 @@
           <ion-grid>
             <ion-label>Horario de Salida: </ion-label>
             <div class="hora-container">
-              <ion-input placeholder="Hora" id="hora" #hora type="text"></ion-input>
-              /
-              <ion-input placeholder="Min" id="min" #min type="text"></ion-input>
-              /
-              <ion-input placeholder="AM / PM" id="ampm" #ampm type="text"></ion-input>
+              <p>{{hora}}:</p><p>{{min}}</p><p>{{ampm}}</p>
             </div>
 
-          </ion-grid>
-          <ion-grid>
             <ion-label>Valor por Persona: </ion-label>
             <div class="hora-container">
-              <ion-input placeholder="$$" id="valor" #valor type="text"></ion-input>
+              <p>${{valor}}</p>
             </div>
-
+          <div>
+            <ion-grid>
+              <ion-button (click)="redirectHome()">Volver</ion-button>
+            </ion-grid>
+          </div>
           </ion-grid>
         </ion-item>
-        <ion-grid>
-          <ion-button (click)="crearViaje(hora,min,ampm,valor)">Crear Nuevo Viaje</ion-button>
-        </ion-grid>
-        <ion-grid>
-          <ion-button (click)="redirectHome()">Volver</ion-button>
-        </ion-grid>
+
       </form>
     </ion-row>
   </ion-grid>

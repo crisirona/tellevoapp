@@ -42,6 +42,10 @@ const routes: Routes = [
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule),
     canActivate:[AuthGuard],canDeactivate:[SalidaGuard]
   },
+  {
+    path: 'tuviaje',
+    loadChildren: () => import('./tuviaje/tuviaje.module').then( m => m.TuviajePageModule)
+  },
 
 ];
 

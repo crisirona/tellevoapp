@@ -16,4 +16,13 @@ export class ViajePage implements OnInit {
   redirectHome(){
     this.router.navigateByUrl("/home")
   }
+
+  crearViaje(hora,min,ampm,valor){
+
+    localStorage.setItem('hora',hora.value)
+    localStorage.setItem('min',min.value)
+    localStorage.setItem('ampm',ampm.value)
+    localStorage.setItem('valor',valor.value)
+    this.router.navigateByUrl("/tuviaje")
+  }
 }
