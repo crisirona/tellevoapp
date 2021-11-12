@@ -19,23 +19,23 @@
         <ion-item>
           <ion-grid>
             <ion-label>Username: </ion-label>
-            <ion-input id="username" #username type="text"></ion-input>
+            <ion-input [(ngModel)]="user.username" name="username"></ion-input>
           </ion-grid>
         </ion-item>
         <ion-item>
           <ion-grid>
             <ion-label>Contraseña: </ion-label>
-            <ion-input id="password" #password type="password"></ion-input>
+            <ion-input [(ngModel)]="user.password" name="password" type="password"></ion-input>
           </ion-grid>
         </ion-item>
         <ion-item>
           <ion-grid>
             <ion-label>Confirmar Contraseña: </ion-label>
-            <ion-input id="password" #password type="password"></ion-input>
+            <ion-input [(ngModel)]="user.password2" name="password2" type="password" ></ion-input>
           </ion-grid>
         </ion-item>
         <ion-grid>
-          <ion-button >Registrarme</ion-button>
+          <ion-button (click)="saveUser()">Registrarme</ion-button>
         </ion-grid>
       </form>
     </ion-row>

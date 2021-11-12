@@ -24,20 +24,9 @@ export class LoginPage implements OnInit {
 
   }
 
-  getUsers(){
-    return this.http
-    .get(this.us.API)
-    .pipe(
-      map((resp:any) => {
-        return resp.data
-      })
-    )
-  }
-
-
   Login(username,password){
     this.us.showLoading();
-    this.getUsers().subscribe((res)=>{
+    this.us.getUsers().subscribe((res)=>{
       this.users=res
       var  i=0
     for(i;i<4;i++){
